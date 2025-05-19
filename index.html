@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="controls">
+    <h1>Sorting Visualizer</h1>
+
+   <select id="algorithm">
+  <option value="merge">Merge Sort</option>
+  <option value="quick">Quick Sort</option>
+  <option value="bubble">Bubble Sort</option>
+  <option value="insertion">Insertion Sort</option>
+  <option value="selection">Selection Sort</option>
+</select>
+
+
+    <select id="speed">
+      <option value="fast">Fast</option>
+      <option value="slow">Slow</option>
+    </select>
+
+    <label for="size">Array Size: <span id="sizeValue">15</span></label>
+    <input type="range" id="size" min="1" max="20" value="15" onchange="updateSizeValue()">
+
+
+    <select id="barColor">
+  <option value="blue">Blue</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+</select>
+
+
+    <button class="randomize-btn" onclick="generateArray()">Randomize Array</button>
+    <button class="sort-btn" onclick="sortHandler()">Sort !</button>
+
+    <div class="note">Feeling lazy? It's OK, just click Sort!</div>
+  </div>
+
+  <div class="array-container" id="array-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
